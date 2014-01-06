@@ -155,6 +155,7 @@ article {
 }
 
 /* An individual post */
+.archive-template,
 .post-template {
 	position: relative;
 	
@@ -244,7 +245,7 @@ article {
 
 /* Generic */
 
-.vertical {
+.home-template .vertical {
 	margin: 15% auto;
 	text-align: center;
 }
