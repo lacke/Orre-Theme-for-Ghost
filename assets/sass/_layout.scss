@@ -1,0 +1,301 @@
+* {
+	@include box-sizing(border-box);
+}
+html {
+	background-color: $body-background-color;
+	color: $primary-color;
+	font-family: $fira-sans;
+	font-size: $font-size;
+	height: 100%;
+}
+
+body {
+	font-size: 1.6rem;
+	height: 100%;
+	line-height: 2rem;
+	text-rendering: optimizelegibility;
+}
+a {
+	color: inherit;
+	
+	&:hover {
+		color: $secondary-color;
+	}
+}
+/* home template, index.hbs */
+.home-template {
+	position: relative;
+	
+	#site-head {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 100%;
+		overflow: hidden;
+		width: 100%;
+
+		.blog-title {
+			font-size: 3rem;
+			
+			@media #{$medium-breakpoint} {
+				font-size: 8rem;
+			}
+		}
+		.blog-description {
+			font-family: $fira-sans;
+			font-size: 2rem;
+			font-style: italic;
+			
+			@media #{$medium-breakpoint} {
+				font-size: 3rem;
+			}
+		}
+		.social-links {
+			background-color: #fff;
+			display: inline-block;
+			@include border-radius(0.8rem, 0.8rem);
+			@include opacity(0.3);
+			padding: 0.8rem;
+			transition: opacity $my-animation-duration;
+			width: auto;
+			
+			&:hover {
+				@include opacity(1);
+			}
+			
+			a {
+				color: #000;
+				padding: 0 0.3rem;
+				
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+		.chevron-down {
+			bottom: 2rem;
+			font-size: 4rem;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
+/* Both index and post */
+main {
+	margin: 3rem 10%;
+	max-width: 700px;
+	
+	@media #{$medium-breakpoint} {
+		margin: 3rem 20%;
+	}
+}
+article {
+	margin-bottom: 6rem;
+	
+	.post-title {
+		line-height: 3rem;
+		a {
+			text-decoration: none;
+		}
+	}
+	.post-meta,
+	.post-tags {
+		display: block;
+		font-family: $fira-sans-light;
+		width: 100%;
+		
+		@media #{$medium-breakpoint} {
+			display: inline;
+			width: auto;
+		}
+		.fa {
+			color: $secondary-color;
+		}
+	}
+	img {
+		border: 1rem solid #000;
+		margin: 0 auto;
+		max-width: 90%;		
+	}
+	.read-more {
+		font-style: italic;
+		text-decoration: none;
+		
+		.fa {
+			font-size: 175%;
+			margin-left: 1rem;
+			vertical-align: middle;
+		}
+	}
+}
+.site-footer {
+	background-color: $tertiary-color;
+	color: #fff;
+	font-family: $fira-sans-light;
+	margin-top: 5rem;
+	padding: 3rem 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	
+	section {
+		margin: 1rem 1rem;
+		
+		@media #{$medium-breakpoint} {
+			margin: 0;
+		}
+	}
+	
+	a {
+		font-style: italic;
+		text-decoration: none;
+	}
+}
+
+/* An individual post */
+.post-template {
+	position: relative;
+	
+	#site-head {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 150px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		
+		@media #{$medium-breakpoint} {
+			height: 100px;
+		}
+
+		.blog-title a {
+			font-size: 3rem;
+			text-decoration: none;
+		}
+		.blog-description {
+			font-family: $fira-sans;
+			font-size: 1.5rem;
+			font-style: italic;
+		}
+		.social-links {
+			background-color: #fff;
+			display: inline-block;
+			@include border-radius(0.8rem, 0.8rem);
+			@include opacity(0.3);
+			margin: 0;
+			padding: 0.8rem;
+			transition: opacity $my-animation-duration;
+			width: auto;
+			
+			&:hover {
+				@include opacity(1);
+			}
+			
+			a {
+				color: #000;
+				padding: 0 0.3rem;
+				
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+			
+			@media #{$medium-breakpoint} {
+				position: absolute;
+				right: 5%;	
+				top: 35%;				
+			}
+		}
+	}
+}
+.author h5 {
+	font-style: italic;
+}
+.post-footer {
+	border-top: 1px solid $secondary-color;
+	
+	section {
+		display: inline-block;
+		padding-right: 2rem;
+		vertical-align: top;
+		width: 100%;
+		
+		@media #{$medium-breakpoint} {
+			max-width: 32%;
+			min-width: 20%;
+			width: auto;
+		}
+	}
+	a {
+		color: #000;
+		padding: 0 0.3rem;
+		text-decoration: none;
+		
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+}
+
+/* Generic */
+
+.vertical {
+	margin: 15% auto;
+	text-align: center;
+}
+.delay-1s {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s
+}
+.delay-2s {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s
+}
+.loop-3x {
+	-webkit-animation-iteration-count: 3;
+	animation-iteration-count: 3;
+}
+
+.github {
+	position: relative;
+	
+	&:hover .tooltip {
+		bottom: 2.5rem;
+		opacity: 1;
+	}
+}
+.tooltip {
+    background: $primary-color;
+    @include border-radius(0.8rem, 0.8rem);
+	bottom: 3rem;
+    color: #fff;
+    display: inline-block;
+	font-size: 1.1rem;
+	font-weight: bold;
+	left: -50%;
+	min-width: 150px;
+	opacity: 0;
+    padding: 0.1rem;
+    position: absolute;
+	text-align: center;	
+	transition: opacity $my-animation-duration ease, bottom $my-animation-duration ease;
+	width: 100%;
+    z-index: 98;
+	
+	&:before {
+		border: solid;
+		border-color: $primary-color transparent;
+		border-width: 1rem 1rem 0 1rem;
+		content: "";
+		left: 50%;
+		margin-left: -1rem;
+		position: absolute;
+		bottom: -0.5rem;
+		z-index: 99;
+	}
+}
