@@ -9,8 +9,6 @@ Used frameworks/fonts/libraries/snippets in Orre:
 * Most animations with the help from [Dan Eden's Animate.css](https://daneden.me/animate/)
 * A scrolling function from [CSS Tricks](http://css-tricks.com/snippets/jquery/smooth-scrolling/)
 
-The only thing bothering me is the pagination. Making a partial file doesn't work currently (on my Ghost 0.3.3).
-
 If you decide to use this theme, you should edit the social links in index.hbs and post.hbs in the header. Also check out the site footer in default.hbs.
 
 Orre has been tested on Safari 7, Google Chrome 31, Firefox 26 and mobile Safari on iOS 7.
