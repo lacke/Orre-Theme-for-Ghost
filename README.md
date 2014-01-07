@@ -13,6 +13,8 @@ If you decide to use this theme, you should edit the social links in index.hbs a
 
 Orre has been tested on Safari 7, Google Chrome 31, Firefox 26 and mobile Safari on iOS 7.
 
+If you want to use the header image I use on [laketa.com](http://laketa.com), go to my [Flickr page](http://www.flickr.com/photos/laketa/11815188133/). I have licensed it as CC BY-SA.
+
 ## Copyright & License
 
 Copyright (C) 2014 Stefan Laketa - Released under the MIT License.
