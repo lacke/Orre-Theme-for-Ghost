@@ -54,12 +54,16 @@ a {
 		.social-links {
 			background-color: #fff;
 			display: inline-block;
+			font-size: 3rem;
 			@include border-radius(0.8rem, 0.8rem);
 			@include opacity(0.3);
 			padding: 0.8rem;
 			transition: opacity $my-animation-duration;
 			width: auto;
 			
+			@media #{$medium-breakpoint} {
+				font-size: 2rem;
+			}
 			&:hover {
 				@include opacity(1);
 			}
