@@ -9,11 +9,7 @@ Used frameworks/fonts/libraries/snippets in Orre:
 * Most animations with the help from [Dan Eden's Animate.css](https://daneden.me/animate/)
 * A scrolling function from [CSS Tricks](http://css-tricks.com/snippets/jquery/smooth-scrolling/)
 
-If you decide to use this theme, you should edit the social links in index.hbs and post.hbs in the header. Also check out the site footer in default.hbs.
-
-Orre has been tested on Safari 7, Google Chrome 31, Firefox 26 and mobile Safari on iOS 7.
-
-If you want to use the header image I use on [laketa.com](http://laketa.com), go to my [Flickr page](http://www.flickr.com/photos/laketa/11815188133/). I have licensed it as CC BY-SA.
+Orre works with Ghost 0.4 and has been tested on Safari 7, Google Chrome 31, Firefox 26 and mobile Safari on iOS 7.
 
 ## Copyright & License
 

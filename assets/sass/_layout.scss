@@ -90,7 +90,7 @@ a {
 main {
 	margin: 3rem 10%;
 	max-width: 700px;
-	
+	min-height: 60%;
 	@media #{$medium-breakpoint} {
 		margin: 3rem 20%;
 	}
@@ -143,6 +143,9 @@ article {
 	position: relative;
 	text-align: center;
 	width: 100%;
+	
+	bottom: 0;
+	margin-bottom: 0;
 	
 	section {
 		margin: 1rem 1rem;
@@ -284,6 +287,7 @@ blockquote {
 code {
 	background-color: $tertiary-color;
 	color: #fff;
+	display: inline-block;
 	@include border-radius(0.8rem, 0.8rem);
 	padding: 0.8rem;
 }

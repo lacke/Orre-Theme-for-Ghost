@@ -1,0 +1,38 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+	
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div id="site-head-content" class="inner">
+        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <h1 class="blog-title"><a href="/">{{@blog.title}}</a></h1>
+        <h2 class="blog-description">{{@blog.description}}</h2>
+		<p class="social-links">
+			<a href="https://github.com/lacke"><i class="fa fa-github"></i></a>
+			<a href="https://twitter.com/lacke"><i class="fa fa-twitter"></i></a>
+			<a href="https://alpha.app.net/lacke"><i class="fa fa-adn"></i></a>
+			<a href="https://google.com/+StefanLaketa"><i class="fa fa-google-plus"></i></a>
+			<a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
+		</p>
+    </div>
+</header>
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+        {{! Everything below outputs content of the the post which has been published }}
+
+        <h1 class="post-title">{{{title}}}</h1>
+        <section class="post-content">
+            {{content}}
+        </section>
+        {{/post}}
+
+    </article>
+
+</main>
