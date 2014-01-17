@@ -11,6 +11,8 @@ Used frameworks/fonts/libraries/snippets in Orre:
 
 Orre works with Ghost 0.4 and has been tested on Safari 7, Google Chrome 31, Firefox 26 and mobile Safari on iOS 7.
 
+For a live demo of the theme, go to my personal site [laketa.com](http://laketa.com).
+
 ## Copyright & License
 
 Copyright (C) 2014 Stefan Laketa - Released under the MIT License.
