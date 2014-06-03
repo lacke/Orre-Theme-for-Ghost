@@ -2,7 +2,7 @@
 
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
-	
+
 <header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <div id="site-head-content" class="inner">
         {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
@@ -12,7 +12,7 @@
 			<a href="https://github.com/username"><i class="fa fa-github"></i></a>
 			<a href="https://twitter.com/username"><i class="fa fa-twitter"></i></a>
 			<a href="https://alpha.app.net/username"><i class="fa fa-adn"></i></a>
-			<a href="https://google.com/+username"><i class="fa fa-google-plus"></i></a>
+			<a href="https://google.com/+username?rel=author"><i class="fa fa-google-plus"></i></a>
 			<a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
 		</p>
     </div>
@@ -28,7 +28,7 @@
         {{! Everything below outputs content of the the post which has been published }}
 
         <h1 class="post-title">{{{title}}}</h1>
-		<span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span> 
+		<span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
 		{{#if tags}}
 		<span class="post-tags">
 			<i class="fa fa-tags"></i>
