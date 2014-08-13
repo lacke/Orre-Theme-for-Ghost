@@ -17,7 +17,7 @@ body {
 }
 a {
 	color: inherit;
-	
+
 	&:hover {
 		color: $secondary-color;
 	}
@@ -25,7 +25,7 @@ a {
 /* home template, index.hbs */
 .home-template {
 	position: relative;
-	
+
 	#site-head {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -37,7 +37,7 @@ a {
 
 		.blog-title {
 			font-size: 3rem;
-			
+
 			@media #{$medium-breakpoint} {
 				font-size: 8rem;
 			}
@@ -46,7 +46,7 @@ a {
 			font-family: $fira-sans;
 			font-size: 2rem;
 			font-style: italic;
-			
+
 			@media #{$medium-breakpoint} {
 				font-size: 3rem;
 			}
@@ -60,18 +60,18 @@ a {
 			padding: 0.8rem;
 			transition: opacity $my-animation-duration;
 			width: auto;
-			
+
 			@media #{$medium-breakpoint} {
 				font-size: 2rem;
 			}
 			&:hover {
 				@include opacity(1);
 			}
-			
+
 			a {
 				color: #000;
 				padding: 0 0.3rem;
-				
+
 				&:hover {
 					color: $secondary-color;
 				}
@@ -97,7 +97,7 @@ main {
 }
 article {
 	margin-bottom: 6rem;
-	
+
 	.post-title {
 		line-height: 3rem;
 		a {
@@ -109,7 +109,7 @@ article {
 		display: block;
 		font-family: $fira-sans-light;
 		width: 100%;
-		
+
 		@media #{$medium-breakpoint} {
 			display: inline;
 			width: auto;
@@ -121,12 +121,12 @@ article {
 	img {
 		border: 1rem solid #000;
 		margin: 0 auto;
-		max-width: 90%;		
+		max-width: 90%;
 	}
 	.read-more {
 		font-style: italic;
 		text-decoration: none;
-		
+
 		.fa {
 			font-size: 175%;
 			margin-left: 1rem;
@@ -143,18 +143,18 @@ article {
 	position: relative;
 	text-align: center;
 	width: 100%;
-	
+
 	bottom: 0;
 	margin-bottom: 0;
-	
+
 	section {
 		margin: 1rem 1rem;
-		
+
 		@media #{$medium-breakpoint} {
 			margin: 0;
 		}
 	}
-	
+
 	a {
 		font-style: italic;
 		text-decoration: none;
@@ -165,9 +165,10 @@ article {
 }
 /* An individual post */
 .archive-template,
-.post-template {
+.post-template,
+.author-template {
 	position: relative;
-	
+
 	#site-head {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -178,7 +179,7 @@ article {
 		position: relative;
 		text-align: center;
 		width: 100%;
-		
+
 		@media #{$medium-breakpoint} {
 			height: 100px;
 		}
@@ -201,24 +202,24 @@ article {
 			padding: 0.8rem;
 			transition: opacity $my-animation-duration;
 			width: auto;
-			
+
 			&:hover {
 				@include opacity(1);
 			}
-			
+
 			a {
 				color: #000;
 				padding: 0 0.3rem;
-				
+
 				&:hover {
 					color: $secondary-color;
 				}
 			}
-			
+
 			@media #{$medium-breakpoint} {
 				position: absolute;
-				right: 5%;	
-				top: 35%;				
+				right: 5%;
+				top: 35%;
 			}
 		}
 	}
@@ -228,13 +229,13 @@ article {
 }
 .post-footer {
 	border-top: 1px solid $secondary-color;
-	
+
 	section {
 		display: inline-block;
 		padding-right: 2rem;
 		vertical-align: top;
 		width: 100%;
-		
+
 		@media #{$medium-breakpoint} {
 			max-width: 32%;
 			min-width: 20%;
@@ -245,11 +246,37 @@ article {
 		color: #000;
 		padding: 0 0.3rem;
 		text-decoration: none;
-		
+
 		&:hover {
 			color: $secondary-color;
 		}
 	}
+}
+/* Author Template */
+.author-image {
+		background: #fff;
+		border-radius: 100%;
+		box-shadow: #E7EEF2 0 0 0 1px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: block;
+		float: right;
+		height: 120px;
+		overflow: hidden;
+		padding: 6px;
+		width: 120px;
+		z-index: 2;
+}
+
+.author-image .img {
+		background-size: cover;
+		background-position: center center;
+		border-radius: 100%;
+		display: block;
+		height: 100%;
+		position: relative;
+		width: 100%;
 }
 
 /* Generic */
@@ -273,11 +300,16 @@ article {
 
 .github {
 	position: relative;
-	
+
 	&:hover .tooltip {
 		bottom: 2.5rem;
 		opacity: 1;
 	}
+}
+.hidden {
+		text-indent: -9999px;
+		visibility: hidden;
+		display: none;
 }
 blockquote {
 	border-left: 1rem solid $tertiary-color;
@@ -296,7 +328,7 @@ table {
     width:100%;
     max-width: 100%;
     background-color: transparent;
-	
+
 	th,
 	td {
     	padding: 1rem;
@@ -304,8 +336,8 @@ table {
     	vertical-align: top;
     	border-top: 1px solid #efefef;
 	}
-	th { 
-		color: #000; 
+	th {
+		color: #000;
 		font-style: italic;
 	}
 
@@ -317,20 +349,20 @@ table {
 	thead:first-child tr:first-child td {
     	border-top: 0;
 	}
-	
-	tbody + tbody { 
-		border-top: 2px solid #efefef; 
+
+	tbody + tbody {
+		border-top: 2px solid #efefef;
 	}
-	
-	table table { 
-		background-color: #fff; 
+
+	table table {
+		background-color: #fff;
 	}
 
 	tbody > tr:nth-child(odd) > td,
 	tbody > tr:nth-child(odd) > th {
     	background-color: $table-alternate-row-color;
 	}
-	
+
 	&.plain {
     	tbody > tr:nth-child(odd) > td,
     	tbody > tr:nth-child(odd) > th {
@@ -351,11 +383,11 @@ table {
 	opacity: 0;
     padding: 0.1rem;
     position: absolute;
-	text-align: center;	
+	text-align: center;
 	transition: opacity $my-animation-duration ease, bottom $my-animation-duration ease;
 	width: 100%;
     z-index: 98;
-	
+
 	&:before {
 		border: solid;
 		border-color: $primary-color transparent;

@@ -1,0 +1,30 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+{{#author}}
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div id="site-head-content" class="inner">
+        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <h1 class="blog-title"><a href="/">{{@blog.title}}</a></h1>
+        <h2 class="blog-description">{{@blog.description}}</h2>
+		{{> social-links}}
+    </div>
+</header>
+
+<main class="content" role="main">
+  <section class="author">
+    {{#if image}}
+      <figure class="author-image">
+        <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+      </figure>
+    {{/if}}
+    <h1 class="author-title">{{name}}</h1>
+    <h2 class="author-bio">{{bio}}</h2>
+    <div class="author-meta">
+      {{#if location}}From: <span class="author-location icon-location">{{location}}</span><br />{{/if}}
+      {{#if website}}Website: <span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+    </div>
+  </section>
+	</main>
+{{/author}}

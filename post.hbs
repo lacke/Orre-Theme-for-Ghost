@@ -35,10 +35,12 @@
             {{content}}
         </section>
         {{#if author}}
+          {{#author}}
             <section class="author">
-                <h5>by {{author.name}}</h5>
+                <h5>by <a href="{{url}}">{{name}}</a></h5>
                 <p>{{author.bio}}</p>
             </section>
+          {{/author}}
         {{/if}}
         <footer class="post-footer">
             <section class="share">
