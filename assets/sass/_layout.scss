@@ -223,6 +223,11 @@ article {
 			}
 		}
 	}
+	.cover-image img {
+		border: 0;
+		min-width: 100%;
+		margin-bottom: 1em;
+	}
 }
 .author h5 {
 	font-style: italic;

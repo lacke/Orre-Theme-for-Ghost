@@ -18,6 +18,11 @@
     {{#post}}
       {{! Everything below outputs content of the the post which has been published }}
       <h1 class="post-title">{{{title}}}</h1>
+      {{#if image}}
+      <figure class="cover-image">
+          <img src="{{image}}" />
+      </figure>
+      {{/if}}
       <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
       {{#if tags}}
         <span class="post-tags">
