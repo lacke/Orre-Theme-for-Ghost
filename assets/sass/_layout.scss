@@ -227,6 +227,23 @@ article {
 .author h5 {
 	font-style: italic;
 }
+.post-navigation {
+	border-top: 1px solid $secondary-color;
+	height: 2em;
+	padding: 0.5em 0;
+	text-align: center;
+
+	.previous-post {
+		float: left;
+		text-align: left;
+		width: 49%;
+	}
+	.next-post {
+		float: right;
+		text-align: right;
+		width: 49%;
+	}
+}
 .post-footer {
 	border-top: 1px solid $secondary-color;
 
