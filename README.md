@@ -1,6 +1,6 @@
-# Orre
+# Orre da Guerra 
 
-Orre is a [Ghost](http://github.com/tryghost/ghost/) theme inspired somewhat by [exposure.so](http://exposure.so).
+Orre da Guerra is a [Ghost](http://github.com/tryghost/ghost/) theme custumized from [Orre](https://github.com/lacke/Orre-Theme-for-Ghost).
 
 __Now updated for Ghost 0.6.__
 
